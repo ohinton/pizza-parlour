@@ -51,6 +51,7 @@ $(document).ready(function(){
     newOrder.totalPrice();
 
     $("#total").text("$" + totalPrice.toFixed(2));
+    $("#name").text(orderName);
     $("#show-price").show(totalPrice);
   });
 });

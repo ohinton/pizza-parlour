@@ -13,12 +13,10 @@
         <h1>Olivia's Pizza Parlour</h1>
         <h2>Choose your pizza size and toppings!</h2>
         <form id="pizza-order" name="pizzaorder">
-
           <div class="form-group">
             <label>Name</label>
             <input required class="customer-name form-control" type="text">
           </div>
-
           <div class="form-group">
             <label>Choose Your Size</label>
             <select class="pizza-size form-control">
@@ -28,35 +26,29 @@
               <option value="extra-large">Extra Large ($10)</option>
             </select>
           </div>
-
           <div class="form-group">
-          <label>Choose Your Toppings ($1 each)</label>
-          <div class="checkbox">
-            <label><input type="checkbox" name="topping" value="">Cheese</label>
+            <label>Choose Your Toppings ($1 each)</label>
+            <div class="checkbox">
+              <label><input type="checkbox" name="topping" value="">Cheese</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="topping" value="">Pepperoni</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="topping" value="">Olives</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="topping" value="">Jalapenos</label>
+            </div>
           </div>
-          <div class="checkbox">
-            <label><input type="checkbox" name="topping" value="">Pepperoni</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" name="topping" value="">Olives</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" name="topping" value="">Jalapenos</label>
-          </div>
-        </div>
-
-
-
           <button type="submit" class="btn-success btn">Submit</button>
-
         </form>
-        </div>
+      </div>
 
-
-        <div id="show-price">
-          <h2>Your pizza price is <span id="total"></span>!</h2>
-          <p>We hope you enjoy your pizza!</p>
-        </div>
+      <div id="show-price">
+        <h2><span id="name"></span>, your pizza will be <span id="total"></span>!</h2>
+        <p>We hope you enjoy your pizza!</p>
+      </div>
 
     </div>
   </body>
