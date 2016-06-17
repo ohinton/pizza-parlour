@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.0.0.js"></script>
     <script src="js/scripts.js"></script>
@@ -11,41 +11,61 @@
     <div class="container">
       <div class="jumbotron">
         <h1>Olivia's Pizza Parlour</h1>
-        <h2>Find out your movie ticket price!</h2>
-        <form id="new-ticket">
+        <h2>Choose your pizza size and toppings!</h2>
+        <form id="pizza-order">
+
           <div class="form-group">
-            <label for="movie">Currently Showing</label>
-            <select class="form-control movie">
-              <option value="new">Finding Dory</option>
-              <option value="new">The Angry Birds Movie</option>
-              <option value = "old">Raiders of the Lost Ark</option>
-              <option value = "old">Jurassic Park</option>
+            <label for="username">Name</label>
+            <input required class="username form-control" type="text">
+          </div>
+
+          <div class="form-group">
+            <label for="size">Pizza Size</label>
+            <select class="pizza-size form-control">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+              <option value="extra-large">Extra Large</option>
             </select>
           </div>
+
           <div class="form-group">
-            <label for="time">Matinee or Evening?</label>
-            <select class="form-control time">
-              <option>Matinee</option>
-              <option>Evening</option>
-            </select>
+            <label for="toppings">Choose your toppings!</label>
+            <div class="toppings checkbox">
+              <label>
+                <input id="pepperoni" type="checkbox" value="pepperoni">
+              Pepperoni
+              </label>
+              <br>
+              <label>
+                <input id="olives" type="checkbox" value="olives">
+              Olives
+              </label>
+              <br>
+              <label>
+              <input id="pepperoni" type="checkbox" value="pepperoni">
+              Pepperoni
+              </label>
+              <br>
+              <label>
+              <input id="olives" type="checkbox" value="olives">
+              Olives
+              </label>
+              <br>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="age">Are you 55 or older?</label>
-            <select class="form-control age">
-              <option>No</option>
-              <option>Yes</option>
-            </select>
-          </div>
+
           <button type="submit" class="btn-success btn">Submit</button>
+
         </form>
-      </div>
+        </div>
+
 
         <div id="show-price">
-          <h2>Your ticket price is <span id="price"></span>!</h2>
-          <p>We hope you enjoy your movie!</p>
+          <h2>Your pizza price is <span id="price"></span>!</h2>
+          <p>We hope you enjoy your pizza!</p>
         </div>
 
     </div>
   </body>
 </html>
-Status API Training Shop Blog About
