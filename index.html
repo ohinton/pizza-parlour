@@ -15,8 +15,8 @@
         <form id="pizza-order">
 
           <div class="form-group">
-            <label for="username">Name</label>
-            <input required class="username form-control" type="text">
+            <label for="customer-name">Name</label>
+            <input required class="customer-name form-control" type="text">
           </div>
 
           <div class="form-group">
@@ -30,29 +30,21 @@
           </div>
 
           <div class="form-group">
-            <label for="toppings">Choose your toppings!</label>
-            <div class="toppings checkbox">
-              <label>
-                <input id="pepperoni" type="checkbox" value="pepperoni">
-              Pepperoni
-              </label>
-              <br>
-              <label>
-                <input id="olives" type="checkbox" value="olives">
-              Olives
-              </label>
-              <br>
-              <label>
-              <input id="pepperoni" type="checkbox" value="pepperoni">
-              Pepperoni
-              </label>
-              <br>
-              <label>
-              <input id="olives" type="checkbox" value="olives">
-              Olives
-              </label>
-              <br>
-            </div>
+            <label for="size">Meat Topping Choice</label>
+            <select class="meat-topping form-control">
+              <option value="meat">Pepperoni</option>
+              <option value="meat">Sausage</option>
+              <option value="meat">Chicken</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="size">Veggie Topping Choice</label>
+            <select class="veggie-topping form-control">
+              <option value="veggie">Mushrooms</option>
+              <option value="veggie">Olives</option>
+              <option value="veggie">Green Peppers</option>
+            </select>
           </div>
 
           <button type="submit" class="btn-success btn">Submit</button>
@@ -62,7 +54,7 @@
 
 
         <div id="show-price">
-          <h2>Your pizza price is <span id="price"></span>!</h2>
+          <h2>Your pizza price is <span id="total"></span>!</h2>
           <p>We hope you enjoy your pizza!</p>
         </div>
 
