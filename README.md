@@ -9,7 +9,9 @@ _Welcome to the official Olivia's Pizza Parlour website! Choose your pizza size 
 ## Specs
 | Behavior        | Input           | Outcome  |
 | ------------- |:-------------:| -----:|
-| Website home page features an order form where the customer enters in their name, selects their pizza size from a drop down, and then selects pizza toppings from a checkbox menu | Customer: Olivia / Pizza Size: Large / Pizza Toppings: Pepperoni, Olives, Jalapeños | Info is stored to determine price |
+| Website home page features an order form where the customer enters in their name to start order | Customer: Olivia | Name is stored to display with final price |
+| After typing in their name, the customer selects a pizza size from a drop down menu | Pizza Size: Small / Medium / Large / Extra Large | Info is stored to determine price |
+| Next, the customer selects pizza toppings from a checkbox menu. Customer can choose all option, some options, or none | Pizza Toppings: Pepperoni, Pineapple, Olives, Jalapeños | Info is stored to determine price |
 | Customer clicks the "submit" button to determine price | Click SUBMIT button | Price is displayed below the form
 
 
@@ -18,10 +20,8 @@ _Welcome to the official Olivia's Pizza Parlour website! Choose your pizza size 
 * _Clone this repository_
 * _Open a HTML file_
 * _Open web browser of choice_
-* _GitHub pages link:_
+* _GitHub pages link: http://ohinton.github.io/pizza-parlour/_
 
-## Notes
-* _I'm sorry it's so boring! The checkboxes took me quite a while to figure out, but I'm glad I finally did. But this left me little time to style the page._
 
 ## Technologies Used
 
