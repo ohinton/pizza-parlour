@@ -1,44 +1,56 @@
-//Business Logic
+//business Logic
 
-//Set Global Variables
 var totalPrice = 0;
 
-//Set Objects
-function Pizza(name, size, meat, veg) {
+function Pizza(name, size, toppings) {
   this.customerName = name;
   this.pizzaSize = size;
-  this.meatTopping = meat;
-  this.vegTopping = veg;
+  this.orderToppings = toppings;
 }
 
 Pizza.prototype.totalPrice = function () {
-  if (this.pizzaSize === "extra-large" && this.meatTopping === "meat" && this.vegTopping === "veggie") {
+  if (this.pizzaSize === "extra-large") {
     totalPrice = 10;
-  } else if (this.pizzaSize === "large" && this.meatTopping === "meat" && this.vegTopping === "veggie") {
+  } else if (this.pizzaSize === "large") {
     totalPrice = 8;
-  } else if (this.pizzaSize === "medium" && this.meatTopping === "meat" && this.vegTopping === "veggie") {
+  } else if (this.pizzaSize === "medium") {
     totalPrice = 6;
   } else {
     totalPrice = 4;
   }
+
+  if (this.orderToppings === 4) {
+    totalPrice += 4;
+  } else if (this.orderToppings === 3) {
+    totalPrice += 3;
+  } else if (this.orderToppings === 2) {
+    totalPrice += 2;
+  } else if (this.orderToppings === 1) {
+    totalPrice += 1;
+  } else {
+  }
   return totalPrice;
 }
 
-//User Logic
+//user logic
 $(document).ready(function(){
   $("form#pizza-order").submit(function(event){
     event.preventDefault();
 
     var orderName = $(".customer-name").val();
     var orderSize = $(".pizza-size").val();
-    var meatTopping = $(".meat-topping").val();
-    var veggieTopping = $(".veggie-topping").val();
 
-    var newOrder = new Pizza(orderName, orderSize, meatTopping, veggieTopping);
+    var orderToppings = 0;
+    for (i=0;i<document.pizzaorder.topping.length;i++){
+      if (document.pizzaorder.topping[i].checked==true){
+        orderToppings+=1;
+      }
+    }
+
+    var newOrder = new Pizza(orderName, orderSize, orderToppings);
     newOrder.totalPrice();
 
     $("#total").text("$" + totalPrice.toFixed(2));
     $("#show-price").show(totalPrice);
-
   });
-  });
+});

@@ -12,40 +12,40 @@
       <div class="jumbotron">
         <h1>Olivia's Pizza Parlour</h1>
         <h2>Choose your pizza size and toppings!</h2>
-        <form id="pizza-order">
+        <form id="pizza-order" name="pizzaorder">
 
           <div class="form-group">
-            <label for="customer-name">Name</label>
+            <label>Name</label>
             <input required class="customer-name form-control" type="text">
           </div>
 
           <div class="form-group">
-            <label for="size">Pizza Size</label>
+            <label>Choose Your Size</label>
             <select class="pizza-size form-control">
-              <option value="small">Small</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
-              <option value="extra-large">Extra Large</option>
+              <option value="small">Small ($4)</option>
+              <option value="medium">Medium ($6)</option>
+              <option value="large">Large ($8)</option>
+              <option value="extra-large">Extra Large ($10)</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label for="size">Meat Topping Choice</label>
-            <select class="meat-topping form-control">
-              <option value="meat">Pepperoni</option>
-              <option value="meat">Sausage</option>
-              <option value="meat">Chicken</option>
-            </select>
+          <label>Choose Your Toppings ($1 each)</label>
+          <div class="checkbox">
+            <label><input type="checkbox" name="topping" value="">Cheese</label>
           </div>
+          <div class="checkbox">
+            <label><input type="checkbox" name="topping" value="">Pepperoni</label>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" name="topping" value="">Olives</label>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" name="topping" value="">Jalapenos</label>
+          </div>
+        </div>
 
-          <div class="form-group">
-            <label for="size">Veggie Topping Choice</label>
-            <select class="veggie-topping form-control">
-              <option value="veggie">Mushrooms</option>
-              <option value="veggie">Olives</option>
-              <option value="veggie">Green Peppers</option>
-            </select>
-          </div>
+
 
           <button type="submit" class="btn-success btn">Submit</button>
 
