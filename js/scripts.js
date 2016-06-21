@@ -10,26 +10,26 @@ function Pizza(name, size, toppings) {
 Pizza.prototype.totalPrice = function () {
   var totalPrice;
     if (this.pizzaSize === "extra-large") {
-      totalPrice = 10;
+      this.totalPrice = 10;
     } else if (this.pizzaSize === "large") {
-      totalPrice = 8;
+      this.totalPrice = 8;
     } else if (this.pizzaSize === "medium") {
-      totalPrice = 6;
+      this.totalPrice = 6;
     } else {
-      totalPrice = 4;
+      this.totalPrice = 4;
     }
 
     if (this.orderToppings === 4) {
-      totalPrice += 4;
+      this.totalPrice += 4;
     } else if (this.orderToppings === 3) {
-      totalPrice += 3;
+      this.totalPrice += 3;
     } else if (this.orderToppings === 2) {
-      totalPrice += 2;
+      this.totalPrice += 2;
     } else if (this.orderToppings === 1) {
-      totalPrice += 1;
+      this.totalPrice += 1;
     } else {
     }
-    return totalPrice;
+    return this.totalPrice;
   }
 
 //user logic
