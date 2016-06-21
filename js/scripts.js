@@ -1,36 +1,36 @@
 //business Logic
 
-var totalPrice = 0;
-
 function Pizza(name, size, toppings) {
   this.customerName = name;
   this.pizzaSize = size;
   this.orderToppings = toppings;
+  this.totalPrice = 0;
 }
 
 Pizza.prototype.totalPrice = function () {
-  if (this.pizzaSize === "extra-large") {
-    totalPrice = 10;
-  } else if (this.pizzaSize === "large") {
-    totalPrice = 8;
-  } else if (this.pizzaSize === "medium") {
-    totalPrice = 6;
-  } else {
-    totalPrice = 4;
-  }
+  var totalPrice;
+    if (this.pizzaSize === "extra-large") {
+      totalPrice = 10;
+    } else if (this.pizzaSize === "large") {
+      totalPrice = 8;
+    } else if (this.pizzaSize === "medium") {
+      totalPrice = 6;
+    } else {
+      totalPrice = 4;
+    }
 
-  if (this.orderToppings === 4) {
-    totalPrice += 4;
-  } else if (this.orderToppings === 3) {
-    totalPrice += 3;
-  } else if (this.orderToppings === 2) {
-    totalPrice += 2;
-  } else if (this.orderToppings === 1) {
-    totalPrice += 1;
-  } else {
+    if (this.orderToppings === 4) {
+      totalPrice += 4;
+    } else if (this.orderToppings === 3) {
+      totalPrice += 3;
+    } else if (this.orderToppings === 2) {
+      totalPrice += 2;
+    } else if (this.orderToppings === 1) {
+      totalPrice += 1;
+    } else {
+    }
+    return totalPrice;
   }
-  return totalPrice;
-}
 
 //user logic
 $(document).ready(function(){
