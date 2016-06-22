@@ -4,11 +4,10 @@ function Pizza(name, size, toppings) {
   this.customerName = name;
   this.pizzaSize = size;
   this.orderToppings = toppings;
-  this.totalPrice = 0;
 }
 
-Pizza.prototype.totalPrice = function () {
-  var totalPrice;
+Pizza.prototype.calculatePrice = function () {
+  var totalPrice = 0;
     if (this.pizzaSize === "extra-large") {
       this.totalPrice = 10;
     } else if (this.pizzaSize === "large") {
@@ -48,10 +47,9 @@ $(document).ready(function(){
     }
 
     var newOrder = new Pizza(orderName, orderSize, orderToppings);
-    newOrder.totalPrice();
 
-    $("#total").text("$" + totalPrice.toFixed(2));
+    $("#total").text("$" + newOrder.calculatePrice().toFixed(2));
     $("#name").text(orderName);
-    $("#show-price").show(totalPrice);
+    $("#show-price").show();
   });
 });
